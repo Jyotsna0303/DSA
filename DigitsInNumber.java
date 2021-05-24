@@ -1,6 +1,4 @@
-package DSA;
 // Find the number of digits in a number
-
 public class DigitsInNumber {
     //iterative solution
     //time complexity= O(n)
