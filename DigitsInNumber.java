@@ -44,10 +44,12 @@ public class DigitsInNumber {
 
     public static void main(String[] args){
         DigitsInNumber d= new DigitsInNumber();
-        int n=35677;
-        long l= 564890089;
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter an integer number:");
+        int n=input.nextInt();
+       // long l= 564890089;
         System.out.println("Solution with iterative approach:"+d.iterativeSolution(n));
-        System.out.println("Iterative sol for long:"+d.iterativeSolution(l));
+       // System.out.println("Iterative sol for long:"+d.iterativeSolution(l));
         System.out.println("Solution with recursive approach:"+d.recursiveSol(n));
         System.out.println("Solution with log approach::"+d.logSolution(n));
     }
