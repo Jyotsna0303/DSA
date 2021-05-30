@@ -41,6 +41,8 @@ class Main {
 
 class Solution {
 
+    // time complexity O(N)
+    //Space complexity O(N)
     public long factorial(int N) {
         // Your code here
         if (N==0 || N==1){
