@@ -14,14 +14,17 @@ public class ReverseaNumber {
         return reverse;
     }
 
-   //recursive approach--complete this
+   //recursive approach
+  //time complexity= O(logn)
    public int reverseRecursive(int n){
         int rev=0;
         if (n==0){
             return 0;
         }
+        int numberOfDigits=(int) Math.log10(n); //number of digits = log(10)+1
+      // System.out.println("number of digits"+ numberOfDigits+" ghsj"+n);
+        int rev= (int) (((n%10) * Math.pow(10,numberOfDigits))+ reverseRecursive(n/10)) ;
         return rev;
-
    }
 
     public static void main(String[] args){
