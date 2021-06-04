@@ -1,0 +1,6 @@
+* LCM of a number
+* Modular multiplicative inverse using euclidean algo
+* Factorial - log solution? if possible
+* no. of trailing zeroes in N!
+* Sieve of erotesthenes-- segmented and O(n) approach
+ List of prime number-  most efficient way by Sandeep gfg
