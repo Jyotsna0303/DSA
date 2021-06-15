@@ -1,5 +1,9 @@
 //Initial Template for Java
+//Constraints: 1 <= N <= 105
 
+
+//Expected Time Complexity: O(N).
+//Expected Auxiliary Space: O(N) (Recursive).
 /*package whatever //do not write package name here */
 
 import java.io.*;
