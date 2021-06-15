@@ -4,3 +4,4 @@ List of questions in this branch
 1. Given an unsorted array of N elements and an element X. The task is to write a recursive function to check whether the element X is present in the given array or not.
 2. Palindrome(string )--recursive solution
 3. Print 1 to N without loop 
+4. Sum of digits --recursive
