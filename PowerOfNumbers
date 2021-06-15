@@ -1,0 +1,100 @@
+/*Given a number and its reverse. Find that number raised to the power of its own reverse.
+Note: As answers can be very large, print the result modulo 10^9 + 7.
+Expected Time Complexity: O(LogN).
+Expected Auxiliary Space: O(LogN).
+
+Constraints:
+1 <= N <= 10^5*/
+//Initial Template for Java
+
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+class Main {
+    
+    // compute reverse of a number
+    public static long rev(long n)
+    {
+        long rev_num = 0;
+         while(n > 0) 
+          { 
+            rev_num = rev_num*10 + n%10; 
+            n = n/10; 
+          } 
+          return rev_num;
+    }
+    
+	public static void main (String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+        //testcases
+		int T=sc.nextInt();
+		while(T-->0)
+		{
+		    Solution obj=new Solution();
+		    
+		    int N;
+		    
+		    
+            //input N
+		    N=sc.nextInt();
+		    int R=0;
+		    
+		    	    
+            // reverse the given number n
+		    R=(int)rev(N);
+	
+            //power of the number to it's reverse
+		    long ans=(long)obj.power(N,R);
+		    System.out.println(ans);
+		    
+		    
+		}
+		
+	}
+}
+
+// } Driver Code Ends
+
+
+//User function Template for Java
+
+class Solution
+{
+   /* (m * n) % p has a very interesting property:
+(m * n) % p =((m % p) * (n % p)) % p
+
+Property 2:
+if b is even:
+(a ^ b) % c = ((a ^ b/2) * (a ^ b/2))%c ? this suggests divide and conquer
+if b is odd:
+(a ^ b) % c = (a * (a ^( b-1))%c
+
+Property 3:
+If we have to return the mod of a negative number x whose absolute value is less than y:
+then (x + y) % y will do the trick*/
+        
+    long power(int N,int R)
+    {
+        //Your code here
+        int m=1000000007;
+        if (N==0){
+            return 0;
+        }
+        if (R==0){
+            return 1 ;
+        }
+        long y;
+        if (R%2==0){
+            y= power(N,R/2);
+            y=(y*y)%m;
+        }
+        else {
+            y=power(N,R-1);
+            y=(N*y)%m;
+        }
+        return y;
+    }
+
+}
