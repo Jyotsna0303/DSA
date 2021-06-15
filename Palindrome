@@ -11,7 +11,7 @@ public class Palindrome {
 
     }
     
-    //time complexity would be O(N) N=length of string
+    //time complexity would be O(N) N=length of string as we are removing 2 characters in each call so it should be N/2
     public static boolean recursivePalindrome(String str, int lower, int upper){
         if (str.length()==1){
             return true;
