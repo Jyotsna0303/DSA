@@ -1,0 +1,27 @@
+//Given a string, the task is to write a recursive function to check if the given string is palindrome or not.
+
+
+import java.util.Scanner;
+
+public class Palindrome {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String str= sc.nextLine();
+        System.out.println(recursivePalindrome(str,0,str.length()-1));
+
+    }
+    
+    //time complexity would be O(N) N=length of string
+    public static boolean recursivePalindrome(String str, int lower, int upper){
+        if (str.length()==1){
+            return true;
+        }
+        if (upper<=lower){
+           return true;
+        }
+        if (str.charAt(lower)!=str.charAt(upper)){
+            return false;
+        }
+        return recursivePalindrome(str,lower+1,upper-1);
+    }
+}
