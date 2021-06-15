@@ -52,6 +52,13 @@ class Solution {
             return N*factorial(N-1);
         }
 }
+    
+    public static long tailRecursive(int N,int a){
+        if (N==0|| N==1){
+            return a;
+        }
+        return tailRecursive(N-1,N*a);
+    }
      // time complexity O(N)
     //Space complexity O(1)
     public long iterativeFactorial(int N) {
