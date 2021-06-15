@@ -1,0 +1,78 @@
+/*You are given a string. You need to print the lexicographically sorted power-set of the string. Or character subsets or subsequences of a string
+Expected Time Complexity: O(2|s|).
+Expected Auxiliary Space: O(|s|).*/
+//Initial Template for Java
+
+
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+class Driver_class
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        //testcases        
+        int t = sc.nextInt();
+        
+        while(t-- > 0)
+        {
+            //input string
+            String st = sc.next();
+            
+            //calling powerSet() function
+            ArrayList<String> ans = new LexSort().powerSet(st);
+            
+            //sorting the result of the powerSet() function
+            Collections.sort(ans);
+    
+            //printing the result
+            for(String s: ans)
+                System.out.print(s + " ");
+            System.out.println();    
+        }
+    }
+}
+
+
+ // } Driver Code Ends
+//User function Template for Java
+
+
+class LexSort
+{   
+    
+    //Function to return the lexicographically sorted power-set of the string.
+    static ArrayList<String> powerSet(String s)
+    {
+        // add your code here
+        String curr="";
+         ArrayList<String> aL= new ArrayList<String>();
+        int index=0;
+       return powerSetMethod(s,aL, curr,index);
+       
+        
+       
+    }
+    
+    static ArrayList<String> powerSetMethod(String s,ArrayList<String> aL, String curr, int index){
+       
+        
+        if (index==s.length()){
+           aL.add(curr);
+            return aL;
+        }
+         powerSetMethod(s,aL,curr,index+1);
+         powerSetMethod(s,aL,curr+s.charAt(index),index+1);
+         return aL;
+    }
+    
+}
+
+
+ 
+
+// { Driver Code Starts.
+
+                                // } Driver Code Ends
