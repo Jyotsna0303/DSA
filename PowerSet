@@ -1,5 +1,5 @@
 /*You are given a string. You need to print the lexicographically sorted power-set of the string. Or character subsets or subsequences of a string
-Expected Time Complexity: O(2|s|).
+Expected Time Complexity: O(2^|s|).
 Expected Auxiliary Space: O(|s|).*/
 //Initial Template for Java
 
