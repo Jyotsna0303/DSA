@@ -12,3 +12,4 @@ List of questions in this branch
 9. Power of numbers n^p with recursion and Power using recursion( find a number raised to reverse of itself)
 10. PowerSet, subset of characters in a string or subsequences of a string
 11. Tower of Hanoi
+12. Permutation of String
