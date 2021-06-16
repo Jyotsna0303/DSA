@@ -1,0 +1,71 @@
+//Initial Template for Java
+
+/*package whatever //do not write package name here 
+Given a string S. The task is to find all permutations of a given string.
+Expected Time Complexity: O(N * N!), N = length of string.
+Expected Auxiliary Space: O(1)
+1 ≤ size of string ≤ 5*/
+
+import java.io.*;
+import java.util.*;
+class Main {
+	public static void main (String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		int T=sc.nextInt();
+		sc.nextLine();
+		while(T-->0)
+		{
+		    
+		    Solution ob=new Solution();
+		    
+		    String S=sc.nextLine();
+		    
+		    ArrayList<String> arr = ob.permutation(S);
+		    for(String s : arr){
+		        System.out.print(s+" ");
+		    }
+		    System.out.println();
+		}
+		
+	}
+}
+// } Driver Code Ends
+
+
+//User function Template for Java
+
+
+class Solution
+{
+    public ArrayList<String> permutation(String S)
+    {
+        //Your code here
+        ArrayList<String> arr=new ArrayList<String>();
+        arr= findPermutation(S,0,S.length()-1,arr);
+        Collections.sort(arr);
+        return arr;
+        
+    }
+	  public ArrayList<String> findPermutation(String str, int lower, int upper, ArrayList<String> arrList){
+	     if (lower==upper){
+	         arrList.add(str);
+	         return arrList;
+	     } 
+	     for (int i=lower;i<=upper;i++){
+	         str=swap(str,i,lower);
+	         findPermutation(str,lower+1,upper,arrList);
+	         str=swap(str,lower,i);
+	     }
+	     return arrList; // we can make this function void
+	  }
+	  
+	  public String swap(String str,int i, int lower){
+	      char[] chArr= str.toCharArray();
+	      char temp=chArr[i];
+	      chArr[i]=chArr[lower];
+	        chArr[lower]=temp;
+	        String newStr= new String(chArr); // instead of creating new String return String.valueof(chArr)
+	        return newStr;
+	  }
+}
