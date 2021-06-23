@@ -1,7 +1,11 @@
 # DSA
 DSA practice
-To Do
+Questions:
 1. Reverse an array- iterative and recursive
+2. 
+
+
+To Do
 2. Rotate an array- all approaches
 3. Leaders in an array
 4. Trapping rain water- 3 solutions (leave stack solution for now)
