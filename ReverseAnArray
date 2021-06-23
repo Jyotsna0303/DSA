@@ -20,6 +20,16 @@ public class ReverseAnArray {
             }
             return arr;
         }
+        // we need to pass 0 as n from main Time complexity O(n)
+         public static void recursiveReverse(int [] arr, int n){
+        if (n>=arr.length/2){
+            return;
+        }
+        int temp=arr[n];
+        arr[n]=arr[arr.length-1-n];
+        arr[arr.length-1-n]=temp;
+        recursiveReverse(arr,n+1);
+    }
      // we can use Collections.reverse(List)-- this takes O(n) time
      // We can use Collections.swap(list,i,j)--O(1)
 
