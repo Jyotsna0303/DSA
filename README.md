@@ -4,11 +4,11 @@ Questions:
 1. Reverse an array- iterative and recursive
 2. Rotate an array
 3. Leaders in an array 
-
+4. Trapping rain water
 
 To Do
 2. Rotate an array- juggling algo left and right both rotation
-4. Trapping rain water- 3 solutions (leave stack solution for now)
+4. Trapping rain water-leave stack solution
 5. stock buy and sell
 6. Find max sum of K consecutive elements in an given array of size N.
 7. Return true if there is an subarray of sum S in any given array of unsorted non-negative integers size N.
