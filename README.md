@@ -2,11 +2,11 @@
 DSA practice
 Questions:
 1. Reverse an array- iterative and recursive
-2. 
+2. Rotate an array 
 
 
 To Do
-2. Rotate an array- all approaches left and right rotation both/ juggling algo left
+2. Rotate an array- right rotation both/ juggling algo left
 3. Leaders in an array
 4. Trapping rain water- 3 solutions (leave stack solution for now)
 5. stock buy and sell
