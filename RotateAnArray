@@ -1,0 +1,26 @@
+public class RotateAnArray {
+    public static void main(String args[]){
+        int arr[]={1,2,3,4,5,6,7};
+        rotateByJuggling(arr,2);
+        System.out.println("Rotate");
+        for(int i:arr){
+            System.out.println(i);
+        }
+    }
+    //naive approach with O(n*k)
+
+    //with reversal time=O(n) n= length of array
+    public static void rotateByreversal(int arr[], int k){
+        int len= arr.length;
+        reverse(arr,0,k-1);
+        reverse(arr,k,len-1);
+        reverse(arr,0,len-1);
+    }
+    public static void reverse(int []arr,int lower,int upper){
+        for (int i=0;i<=(upper-lower)/2;i++){
+            int temp=arr[lower+i];
+            arr[lower+i]=arr[upper-i];
+            arr[upper-i]=temp;
+        }
+    }
+}
