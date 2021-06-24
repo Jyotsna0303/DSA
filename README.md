@@ -2,12 +2,12 @@
 DSA practice
 Questions:
 1. Reverse an array- iterative and recursive
-2. Rotate an array 
+2. Rotate an array
+3. Leaders in an array 
 
 
 To Do
 2. Rotate an array- juggling algo left and right both rotation
-3. Leaders in an array
 4. Trapping rain water- 3 solutions (leave stack solution for now)
 5. stock buy and sell
 6. Find max sum of K consecutive elements in an given array of size N.
