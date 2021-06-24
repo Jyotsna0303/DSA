@@ -9,6 +9,7 @@ public class RotateAnArray {
     }
     //naive approach with O(n*k)
 
+//left Rotation
     //with reversal time=O(n) n= length of array
     public static void rotateByreversal(int arr[], int k){
         int len= arr.length;
@@ -16,11 +17,61 @@ public class RotateAnArray {
         reverse(arr,k,len-1);
         reverse(arr,0,len-1);
     }
+    
+  //Right Rotation
+    public static void rightRotateByreversal(int arr[], int k){
+        int len= arr.length;
+        reverse(arr,0,len-1-k);
+        reverse(arr,len-k,len-1);
+        reverse(arr,0,len-1);
+    }
+    
     public static void reverse(int []arr,int lower,int upper){
         for (int i=0;i<=(upper-lower)/2;i++){
             int temp=arr[lower+i];
             arr[lower+i]=arr[upper-i];
             arr[upper-i]=temp;
         }
+    }
+    
+    //Juggling algo for left rotation time complexity=O(N) Space O(1)
+    public static void rotateByJuggling(int[] arr, int k){
+        int gcd= gcd(arr.length,k);
+        System.out.println(gcd);
+        int temp=0;
+        int d=-1;
+        for(int i=0;i<gcd;i++){
+            temp=arr[i];
+            int j=i;
+            while(true){
+                d=(j+k)%arr.length;
+                if (d==i){
+                    break;
+                }
+               arr[j] =arr[d];
+              j=d;
+            }
+            arr[j]=temp;
+        }
+    }
+    
+    public static int gcd(int a, int b){
+        if (a>=b){
+            if (b==0){
+                return a;
+            }
+            else {
+                return gcd(b,a%b);
+            }
+        }
+        else{
+            if (a==0){
+                return b;
+            }
+            else{
+                return gcd(a,b%a);
+            }
+        }
+
     }
 }
