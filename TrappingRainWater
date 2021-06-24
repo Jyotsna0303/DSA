@@ -1,0 +1,79 @@
+
+
+public class TrappingRainWater {
+    public static void main(String [] args){
+        int[] arr={3,0,1,2,5};
+        System.out.println("Trapping rain water: "+betterTrapping(arr));
+
+    }
+    // two array approach Time=O(n) Space=O(n)
+    public static int trappingRain(int[] arr){
+        int[] leftMax= new int[arr.length];
+        int leftmax=arr[0];
+        leftMax[0]=0;
+        for(int i=1;i< arr.length;i++){
+            if (leftmax<arr[i]){
+                leftMax[i]=leftmax;
+                leftmax=arr[i];
+            }
+            else{
+                leftMax[i]=leftmax;
+            }
+        }
+        int[] rightMax= new int[arr.length];
+        int right= arr[arr.length-1];
+        rightMax[0]=0;
+        for (int i=arr.length-2;i>=0;i--){
+            if (right>arr[i]){
+                rightMax[i]=right;
+            }
+            else{
+                rightMax[i]=right;
+                right=arr[i];
+
+            }
+        }
+        int sum=0;
+       for(int i=0;i<arr.length;i++){
+           if (leftMax[i]<rightMax[i]){
+               if (leftMax[i]-arr[i]>0){
+                   sum+=leftMax[i]-arr[i];
+               }
+           }
+           else{
+               if (rightMax[i]-arr[i]>0){
+                   sum+=rightMax[i]-arr[i];
+               }
+           }
+       }
+       return sum;
+    }
+
+    //better approach with o(1) space approach and time comp=O(N)
+    public static int betterTrapping(int[] arr){
+        int low=0, high=arr.length-1;
+        int sum=0;
+        int leftMax=0; int rightMax=0;
+        while(low<high){
+            if (arr[low]<=arr[high]){
+                if (arr[low]>leftMax){
+                    leftMax=arr[low];
+                }
+                else{
+                    sum+=leftMax-arr[low];
+                }
+                low++;
+            }
+            else{
+               if (arr[high]>rightMax){
+                   rightMax=arr[high];
+               }
+               else{
+                   sum+=rightMax-arr[high];
+               }
+               high--;
+            }
+        }
+        return sum;
+    }
+}
