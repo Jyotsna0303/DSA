@@ -1,0 +1,29 @@
+//Leader in an Array if there are no greater element in right of the element
+
+import java.util.ArrayList;
+
+public class LeadersInArray {
+    public static void main(String[] args){
+        int arr[]={5,3,20,25,8,3}; //o/p=3 ,8,25
+        System.out.println("Leader");
+        ArrayList<Integer> arrList= new ArrayList<>();
+        leaders(arr,arrList);
+        for(int n:arrList){
+            System.out.println(n);
+        }
+    }
+    //naive approach will take two loops with O(n^2)
+    //time complexity O(n) with O(1) space
+    public static ArrayList<Integer> leaders(int arr[], ArrayList<Integer> arrayList){
+        int max=arr[arr.length-1];
+        arrayList.add(max);
+        for(int i=arr.length-1;i>=0;i--){
+            if(arr[i]>max){
+                arrayList.add(arr[i]);
+                max=arr[i];
+            }
+
+        }
+        return arrayList;
+    }
+}
