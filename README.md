@@ -5,12 +5,14 @@ Questions:
 2. Rotate an array
 3. Leaders in an array 
 4. Trapping rain water
+5. Find max sum of K consecutive elements in an given array of size N.
+6. Return true if there is an subarray of sum S in any given array of unsorted non-negative integers size N.
 
 To Do
 2. Rotate an array- juggling algo left and right both rotation
 4. Trapping rain water- stack solution
 5. stock buy and sell- 1 transaction allowed, 2 transaction allowed, K transctions allowedm max profit allowed(local minima and local maxima ) (can be solved by Dynamic programming)
-6. Find max sum of K consecutive elements in an given array of size N.
+6. 
 7. Return true if there is an subarray of sum S in any given array of unsorted non-negative integers size N.
 8. Return true if there is an subarray of sum S in any given array of sorted non-negative integers size N.
 9. Return true if there is an subarray of sum S in any given array of unsorted positive or negative integers size N.( do it after hashing)
