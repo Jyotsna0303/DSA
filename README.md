@@ -6,15 +6,15 @@ Questions:
 3. Leaders in an array 
 4. Trapping rain water
 5. Find max sum of K consecutive elements in an given array of size N.
-6. Return true if there is an subarray of sum S in any given array of unsorted non-negative integers size N.
 
 To Do
 2. Rotate an array- juggling algo left and right both rotation
 4. Trapping rain water- stack solution
 5. stock buy and sell- 1 transaction allowed, 2 transaction allowed, K transctions allowedm max profit allowed(local minima and local maxima ) (can be solved by Dynamic programming)
-6. 
-7. Return true if there is an subarray of sum S in any given array of unsorted non-negative integers size N.
-8. Return true if there is an subarray of sum S in any given array of sorted non-negative integers size N.
+6. 6. Return true if there is an subarray of sum S in any given array of unsorted non-negative integers size N.--- try after hashing
+
+7. Return true if there is an subarray of sum S in any given array of unsorted non-negative integers size N. after hashing
+8. Return true if there is an subarray of sum S in any given array of sorted non-negative integers size N.- after hashing
 9. Return true if there is an subarray of sum S in any given array of unsorted positive or negative integers size N.( do it after hashing)
 10. N-bonacci number. Print first M N-bonacci number. I/P: N=3, M=8 O/P ( 0 ,0,1, 1, 2, 4, 7, 13) ( it is similar to fibonacci where N=2) O(N*M ) solution
 11. Count distinct element in every window of size K. I/P: {1,2,1, ,3,4 ,3,3} K=4 o/p:3,4,3 2 O(N): do it after hashing
