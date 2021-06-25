@@ -1,0 +1,27 @@
+
+// Find max sum of K consecutive elements in an given array of size N
+public class MaxSumOfK {
+    public static void main(String [] args){
+        int arr[] ={1,8,30,-5,20,7};
+        int k=3;
+        System.out.println("Max sum of K consecutive numbers"+maxSum(arr,k));
+    }
+    //naive approach with two loops with time complexity= O((n-k)*K)
+
+    // O(n) solution with window sliding technique
+    public static int maxSum(int[] arr, int k){
+        int currentSum=0;
+        for(int i=0;i<k;i++){
+            currentSum+=arr[i];
+        }
+        int max=currentSum;
+        for(int i=0;i+k<arr.length;i++){
+            currentSum= currentSum+arr[i+k] -arr[i];
+            if(max<currentSum){
+                max=currentSum;
+            }
+        }
+
+            return max;
+    }
+}
