@@ -6,6 +6,9 @@ Questions:
 3. Leaders in an array 
 4. Trapping rain water
 5. Find max sum of K consecutive elements in an given array of size N.
+6. N-bonacci number. Print first M N-bonacci number. I/P: N=3, M=8 O/P ( 0 ,0,1, 1, 2, 4, 7, 13) ( it is similar to fibonacci where N=2)
+7. Given an array of integers, find if it has an equibrium point.
+8. 
 
 To Do
 2. Rotate an array- juggling algo left and right both rotation
@@ -19,7 +22,7 @@ To Do
 10. N-bonacci number. Print first M N-bonacci number. I/P: N=3, M=8 O/P ( 0 ,0,1, 1, 2, 4, 7, 13) ( it is similar to fibonacci where N=2) O(N*M ) solution
 11. Count distinct element in every window of size K. I/P: {1,2,1, ,3,4 ,3,3} K=4 o/p:3,4,3 2 O(N): do it after hashing
 12. given a fixed array of size N & multiple queries, how to perform queries efficiently in O(1) time. queries getSum(l,r)
-13. Given an array of integers, find if it has an equibrium point.
+13. 
 14. Given N ranges, find max appearing element in that range.
 15. check if a given array can be divided into three parts with equal sum.
 16. check if there is a subarray with 0 sum-- prefix sum +hashing
