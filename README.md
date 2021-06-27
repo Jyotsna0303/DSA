@@ -8,7 +8,7 @@ Questions:
 5. Find max sum of K consecutive elements in an given array of size N.
 6. N-bonacci number. Print first M N-bonacci number. I/P: N=3, M=8 O/P ( 0 ,0,1, 1, 2, 4, 7, 13) ( it is similar to fibonacci where N=2)
 7. Given an array of integers, find if it has an equibrium point.
-8. 
+8. Given N ranges, find max appearing element in that range.
 
 To Do
 2. Rotate an array- juggling algo left and right both rotation
