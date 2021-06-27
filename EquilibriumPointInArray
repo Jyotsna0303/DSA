@@ -1,0 +1,27 @@
+// arr={3,4,8,-9,20,6} equilibrium point exists and it is where 20 is
+//arr={4,-2,2}   equilibrium point exists and it is where 4 is
+
+public class EquilibriumInArray {
+    public static void main(String[] args){
+        int [] arr= {-2,2,2};
+        System.out.println("Equilibrium: "+ ifEquilibrium(arr));
+        }
+// solution with two loops O(N^2)= time 
+// solution with two arrays leftSum and rightSum, at index when leftmax[i]== rightmax[i] is equilibrium point time=O(N) space=O(N)
+
+// below solution with time=O(N) and space=O(1)
+public static boolean ifEquilibrium(int[] arr){
+        int totalSum=0, leftSum=0, rightSum=0;
+        for(int i=0;i<arr.length;i++){
+        totalSum+=arr[i];
+        }
+        for(int i=0;i<arr.length;i++){
+        rightSum=totalSum-leftSum-arr[i];
+        if (leftSum==rightSum){
+        return true;}
+        else{
+        leftSum+=arr[i];			}
+        }
+        return false;
+        }
+}
