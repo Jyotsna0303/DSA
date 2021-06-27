@@ -1,0 +1,38 @@
+//Given N ranges, find max appearing element in that range. 
+//eg: L[]={1,2,5,15} R={5,8,7,18} O/P=5
+package dsa.practice;
+
+public class MaxAppearingElement {
+    public static void main(String[] args){
+        int [] leftArray={1,2,5,15};
+        int [] rightArray={5,8,7,18};
+        //assuming that range is not that big
+        int[] resultArray = new int[1000];
+        System.out.println("max Appearing element in given ranges: "+maxAppearing(leftArray,rightArray,resultArray));
+    }
+    // time=O(n*m) m=max no. of elements in a range;
+    // create a hashtable-> traverse through all ranges ans store all of items  & increase the frequency of item in hashtable
+    
+    
+    
+    // below O(N) N=number of ranges;
+    public static int maxAppearing(int[] leftArray, int[] rightArray, int[] resultArray){
+        for (int i=0;i<leftArray.length;i++){
+            resultArray[leftArray[i]]++;
+            resultArray[rightArray[i]+1]--;
+        }
+
+        for (int i=1;i<resultArray.length;i++){
+            resultArray[i]=resultArray[i]+resultArray[i-1];
+        }
+        int max=0;
+        int maxIndex=0;
+        for (int i=0;i<resultArray.length;i++){
+            if (max<resultArray[i]){
+                max=resultArray[i];
+                maxIndex=i;}
+        }
+        return maxIndex;
+    }
+
+}
