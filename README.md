@@ -9,6 +9,7 @@ Questions:
 6. N-bonacci number. Print first M N-bonacci number. I/P: N=3, M=8 O/P ( 0 ,0,1, 1, 2, 4, 7, 13) ( it is similar to fibonacci where N=2)
 7. Given an array of integers, find if it has an equibrium point.
 8. Given N ranges, find max appearing element in that range.
+9. Given an array arr[] of n positive integers. The task is to find the maximum for every adjacent pairs in the array.
 
 To Do
 2. Rotate an array- juggling algo left and right both rotation
@@ -27,4 +28,4 @@ To Do
 15. check if a given array can be divided into three parts with equal sum.
 16. check if there is a subarray with 0 sum-- prefix sum +hashing
 17. Find longest subarray with Os and 1s in an given binary array.- prefix sum+hashing
-18. questions from geeksforgeeks theory for prefix sum+ problems in theory. + Problems in array section.
+18. questions from geeksforgeeks theory for prefix sum+ problems in theory. + Problems in array section remaining problems of array.
