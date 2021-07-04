@@ -12,7 +12,7 @@ Questions:
 9. Strongest Neighbour Given an array arr[] of n positive integers. The task is to find the maximum for every adjacent pairs in the array.
 10. Minimum adjacent difference in a circular array. Given an array Arr of n integers arranged in a circular fashion. Your task is to find the minimum absolute difference between adjacent elements.
 11. Rearrange Array Alternately.Given a sorted array of positive integers. Your task is to rearrange  the array elements alternatively i.e first element should be max value, second should be min value, third should be second max, fourth should be second min and so on.
-
+12. Rearrange an array.Given an array arr[] of size N where every element is in the range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]].
 To Do
 2. Rotate an array- juggling algo left and right both rotation
 4. Trapping rain water- stack solution
