@@ -8,3 +8,6 @@ TO Do
 3. Find if there is a triplet a,b,c where a^2 + b^2 = c^2. (Pythagorean triplets)
 4. Ternary search
 5. Problems in theory section
+
+Questions to do again
+1. Count no. of Binary 1's 
