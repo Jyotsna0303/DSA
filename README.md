@@ -12,4 +12,5 @@ TO Do
 
 Questions to do again
 1. Count no. of Binary 1's 
-2
+2. Two repeated elements from problem from gfg course
+3. 
