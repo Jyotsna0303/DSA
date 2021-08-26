@@ -6,7 +6,8 @@ import java.io.*;
 
  // } Driver Code Ends
 //User function Template for Java
-
+// TIME = O(N^2) IN WORST CASE
+// SPACE= O(1)
 class Solution
 {
     //Function to sort the array using bubble sort algorithm.
