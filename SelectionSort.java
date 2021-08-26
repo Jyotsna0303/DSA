@@ -13,6 +13,7 @@ public class SelectionSort {
 
     }
 // timecomplexity= O(n^2) in every case worst, best and all.
+//space = O(1)
     public static void selectionSort(int[] arr, int n) {
         // find the max and then swap with the last position.
         // So we are finding max and keeping the element at correct position
