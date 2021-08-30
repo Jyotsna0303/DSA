@@ -1,5 +1,4 @@
 public class SelectionSort {
-    
     public static void main(String args[]) {
 
         int[] arr = new int[]{20, 10, 5, 15};
@@ -9,11 +8,12 @@ public class SelectionSort {
         }
         System.out.println("After sorting");
 
-        selectionSort(arr, n);
+        //selectionSort(arr, n);
+        selectionSort2ndAttempt(arr, n); //most common approach find min and place it at the beginning of the array
+
 
     }
-// timecomplexity= O(n^2) in every case worst, best and all.
-//space = O(1)
+
     public static void selectionSort(int[] arr, int n) {
         // find the max and then swap with the last position.
         // So we are finding max and keeping the element at correct position
@@ -33,6 +33,28 @@ public class SelectionSort {
 
             newLength--;
         }
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+
+
+    public static void selectionSort2ndAttempt(int []arr, int n){
+        //find min and place it at the beginning
+        int index, min;
+        for (int i=0; i<n-1;i++){
+            min=arr[i];
+            index=i;
+          for (int j=i+1;j<n;j++){
+              if(arr[j]<min){
+                  min=arr[i];
+                  index=j;
+              }
+          }
+            arr[index]=arr[i];
+            arr[i]=min;
+        }
+
         for (int i = 0; i < n; i++) {
             System.out.println(arr[i]);
         }
