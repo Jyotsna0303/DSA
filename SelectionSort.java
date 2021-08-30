@@ -41,18 +41,19 @@ public class SelectionSort {
 
     public static void selectionSort2ndAttempt(int []arr, int n){
         //find min and place it at the beginning
-        int index, min;
+        int min_index, temp;
         for (int i=0; i<n-1;i++){
-            min=arr[i];
-            index=i;
-          for (int j=i+1;j<n;j++){
-              if(arr[j]<min){
-                  min=arr[i];
-                  index=j;
+            min_index=i;
+          for (int j=i+1;j<n;j++) {
+              if (arr[j] < arr[min_index]) {
+                  min_index = j;
               }
           }
-            arr[index]=arr[i];
-            arr[i]=min;
+          if (i!=min_index) {
+              temp = arr[i];
+              arr[i] = arr[min_index];
+              arr[min_index] = temp;
+          }
         }
 
         for (int i = 0; i < n; i++) {
