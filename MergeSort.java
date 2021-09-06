@@ -74,3 +74,7 @@ public class MergeSort{
     }
     
 }
+// Auxiliary Space: O(n)
+// Algorithmic Paradigm: Divide and Conquer
+// Sorting In Place: No in a typical implementation
+// Stable: Yes
