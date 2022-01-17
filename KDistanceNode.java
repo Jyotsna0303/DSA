@@ -9,6 +9,11 @@ public class KDistanceNode {
         System.out.println("K Distance Nodes: " );
         printNodesKDistance(root, 2);
     } 
+
+    //Time Complexity=O(n), n=number of nodes
+    //Space= O(h), h=height of tree
+    
+
     public static void  printNodesKDistance(Node root, int k){
         if(root==null) return;
         if (k==0){
